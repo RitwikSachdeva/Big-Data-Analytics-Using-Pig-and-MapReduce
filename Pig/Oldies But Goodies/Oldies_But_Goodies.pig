@@ -21,7 +21,7 @@ ratingsByMovie = GROUP ratings BY movieID;
 --DESCRIBE ratingsByMovie 
 --Output: ratingsByMovie: {group: int, ratings:{(userID: int, movieID: int, rating: int, ratingTime: int)}}
 --DUMP ratingsByMovie 
---Output: (1, {(807,1,4,89898889898), (554,1,3,35353453)....)
+--Output: (1, {(807,1,4,89898889898), (554,1,3,35353453)....})
 
 --Get the Average Rating for Each Movie
 avgRatings = FOREACH ratingsByMovie GENERATE group AS movieID, AVG(ratings.rating) AS avgRating;
