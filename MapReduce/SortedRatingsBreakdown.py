@@ -20,6 +20,6 @@ class SortedRatingsBreakdown(MRJob):
         for movie in movies:
             yield movie, count
 
-
+#Main function
 if __name__ == '__main__':
     SortedRatingsBreakdown.run()
